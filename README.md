@@ -24,8 +24,8 @@ This combination of technologies ensures smooth functionality, efficient data ha
 
 <p>
   This page is an Main page
-  <a href="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/1.PNG" target="_blank">
-  <img src="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/1.PNG" width="200" style="max-width:100%;"></a> 
+  <a href="![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)" target="_blank">
+  <img src="![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)" width="200" style="max-width:100%;"></a> 
   
   This page is an Write
   <a href="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/2.PNG" target="_blank">
@@ -40,7 +40,6 @@ This combination of technologies ensures smooth functionality, efficient data ha
   <img src="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/3.PNG" width="200" style="max-width:100%;"></a>
 
   This page is an Delete
-  ![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)
   ![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)
 
   This page is an NoteDetail
