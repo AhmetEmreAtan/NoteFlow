@@ -23,26 +23,7 @@ This combination of technologies ensures smooth functionality, efficient data ha
 # Project Dısplay Image
 
 <p>
-  This page is an Main page
-  <a href="![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)" target="_blank">
-  <img src="![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)" width="200" style="max-width:100%;"></a> 
-  
-  This page is an Write
-  <a href="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/2.PNG" target="_blank">
-  <img src="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/2.PNG" width="200" style="max-width:100%;"></a>
-  
-  This page is an SaveNote
-  <a href="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/3.PNG" target="_blank">
-  <img src="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/3.PNG" width="200" style="max-width:100%;"></a>
+  The application allows users to easily take, view, edit, and delete notes with its simple interface. You can delete notes by long-pressing on them. You can also go to the note's details to edit it or view its content in detail.
 
-  This page is an Toast
-  <a href="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/3.PNG" target="_blank">
-  <img src="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/3.PNG" width="200" style="max-width:100%;"></a>
-
-  This page is an Delete
-  ![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)
-
-  This page is an NoteDetail
-  <a href="![NoteDetail](https://github.com/user-attachments/assets/8d11f0e0-992d-4db5-8cb5-d8db6b226613)" target="_blank">
-  <img src="https://github.com/AhmetEmreAtan/android_contacts_app/blob/main/images/3.PNG" width="200" style="max-width:100%;"></a>
+  ![Simple Clean Phone Screen Mockup New Season Instagram Post](https://github.com/user-attachments/assets/2b5b0a3c-d3ba-44ed-b790-987a82e75044)
 </p>
