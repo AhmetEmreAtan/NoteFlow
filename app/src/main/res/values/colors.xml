@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#b2c4df</color>
+    <color name="btn_bg">#3d5272</color>
+    <color name="grey">#E9EFEC</color>
+    <color name="gradient">#C4DAD2</color>
+    <color name="teal">#6A9C89</color>
+    <color name="coldgreen">#16423C</color>
+</resources>
