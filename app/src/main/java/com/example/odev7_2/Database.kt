@@ -64,4 +64,37 @@ class Database(context: Context) :
         return result
     }
 
+    fun updateNote(id: Int, title: String, detail: String): Int {
+        val db = this.writableDatabase
+        val values = ContentValues().apply {
+            put(KEY_TITLE, title)
+            put(KEY_DETAIL, detail)
+        }
+        val result = db.update(TABLE_NAME, values, "$KEY_ID = ?", arrayOf(id.toString()))
+        db.close()
+        return result
+    }
+
+    fun getNoteById(id: Int): Notes? {
+        val db = this.readableDatabase
+        val cursor = db.query(
+            TABLE_NAME,
+            arrayOf(KEY_ID, KEY_TITLE, KEY_DETAIL),
+            "$KEY_ID = ?",
+            arrayOf(id.toString()),
+            null, null, null
+        )
+        var note: Notes? = null
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                val noteId = cursor.getInt(cursor.getColumnIndex(KEY_ID))
+                val title = cursor.getString(cursor.getColumnIndex(KEY_TITLE))
+                val detail = cursor.getString(cursor.getColumnIndex(KEY_DETAIL))
+                note = Notes(noteId, title, detail)
+            }
+            cursor.close()
+        }
+        db.close()
+        return note
+    }
 }

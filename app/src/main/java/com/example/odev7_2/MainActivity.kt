@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         adapter = NotesAdapter(this, notesList, object : NotesAdapter.OnItemClickListener {
             override fun onItemClick(note: Notes, position: Int) {
                 val intent = Intent(this@MainActivity, Detail::class.java)
-                intent.putExtra("POSITION", position)
+                intent.putExtra("NOTE_ID", note.id)
                 startActivity(intent)
             }
         }, object : NotesAdapter.OnItemLongClickListener {
@@ -97,6 +97,13 @@ class MainActivity : AppCompatActivity() {
 
         showNotes()
     }
+
+
+    override fun onResume() {
+        super.onResume()
+        showNotes()
+    }
+
 
     private fun showNotes() {
         val notes = database.getAllNotes()
