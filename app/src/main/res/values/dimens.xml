@@ -2,5 +2,5 @@
 <resources>
     <dimen name="item_spacing">16dp</dimen>
     <dimen name="vertical_item_spacing">16dp</dimen>
-    <dimen name="horizontal_item_spacing">8dp</dimen>
+    <dimen name="horizontal_item_spacing">0dp</dimen>
 </resources>

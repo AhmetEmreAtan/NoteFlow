@@ -8,4 +8,8 @@
     <color name="gradient">#C4DAD2</color>
     <color name="teal">#6A9C89</color>
     <color name="coldgreen">#16423C</color>
+    <color name="red">#D21312</color>
+    <color name="green">#557C56</color>
+    <color name="blue">#1230AE</color>
+    <color name="yellow">#EEDF7A</color>
 </resources>

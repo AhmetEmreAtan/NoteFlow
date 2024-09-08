@@ -1,25 +1,24 @@
 package com.example.odev7_2
 
-import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var database: Database
-    lateinit var edittxttitle: EditText
-    lateinit var edittxtdetail: EditText
-    lateinit var btnsave: Button
-    lateinit var deleteinfo: ImageButton
     lateinit var recyclerView: RecyclerView
+    lateinit var addNoteButton: FloatingActionButton
+    lateinit var toastButton: ImageButton
     private lateinit var notesList: MutableList<Notes>
     private lateinit var adapter: NotesAdapter
 
@@ -27,22 +26,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        edittxttitle = findViewById(R.id.edittexttitle)
-        edittxtdetail = findViewById(R.id.edittxtdetail)
-        btnsave = findViewById(R.id.btnsave)
-        deleteinfo = findViewById(R.id.delete_note_info)
         recyclerView = findViewById(R.id.recyclerView)
+        addNoteButton = findViewById(R.id.add_note)
+        toastButton = findViewById(R.id.delete_note_info)
         database = Database(this)
         notesList = mutableListOf()
 
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        recyclerView.layoutManager = GridLayoutManager(this, 1)
 
         val verticalSpace = resources.getDimensionPixelSize(R.dimen.vertical_item_spacing)
         val horizontalSpace = resources.getDimensionPixelSize(R.dimen.horizontal_item_spacing)
         recyclerView.addItemDecoration(SpacesItemDecoration(verticalSpace, horizontalSpace))
 
+        toastButton.setOnClickListener {
+            Toast.makeText(this, "Long press to delete the note.", Toast.LENGTH_SHORT).show()
+        }
+
         adapter = NotesAdapter(this, notesList, object : NotesAdapter.OnItemClickListener {
             override fun onItemClick(note: Notes, position: Int) {
+
                 val intent = Intent(this@MainActivity, Detail::class.java)
                 intent.putExtra("NOTE_ID", note.id)
                 startActivity(intent)
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                     database.deleteNoteById(note.id)
                     notesList.removeAt(position)
                     adapter.notifyDataSetChanged()
-                    Toast.makeText(this@MainActivity, "Successfully Deleted.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Note deleted successfully.", Toast.LENGTH_SHORT).show()
                     alertDialog.dismiss()
                 }
 
@@ -75,24 +77,9 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.adapter = adapter
 
-        btnsave.setOnClickListener {
-            val title = edittxttitle.text.toString()
-            val detail = edittxtdetail.text.toString()
-
-            if (title.isEmpty() || detail.isEmpty()) {
-                Toast.makeText(this, "You entered incomplete information :)))", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            } else {
-                edittxttitle.setText("")
-                edittxtdetail.setText("")
-            }
-
-            database.insertNote(title, detail)
-            showNotes()
-        }
-
-        deleteinfo.setOnClickListener {
-            Toast.makeText(this, "To delete the note, press and hold the note.", Toast.LENGTH_SHORT).show()
+        addNoteButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, AddNoteActivity::class.java)
+            startActivity(intent)
         }
 
         showNotes()
@@ -112,3 +99,4 @@ class MainActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
     }
 }
+

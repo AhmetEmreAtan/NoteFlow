@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.TextView
 import android.widget.Toast
 
 class Detail : AppCompatActivity() {
@@ -33,7 +32,7 @@ class Detail : AppCompatActivity() {
             }
         }
 
-        // Değişiklikleri kaydetme işlemi
+
         saveChangesImageButton.setOnClickListener {
             val updatedTitle = titleEditText.text.toString()
             val updatedDetail = detailEditText.text.toString()
@@ -43,7 +42,7 @@ class Detail : AppCompatActivity() {
             } else {
                 db.updateNote(noteId, updatedTitle, updatedDetail)
                 Toast.makeText(this, "Note updated successfully.", Toast.LENGTH_SHORT).show()
-                finish() // Detay sayfasından çıkış
+                finish()
             }
         }
     }
